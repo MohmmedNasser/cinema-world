@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema World - Movies</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/movies.css">
+  <link rel="shortcut icon" href="image/logo.jpg">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!-- Start Navbar -->
+  <nav class="nav">
+    <div class="container">
+
+      <div class="sidebar">
+        <ul class="nav-xs list-unstyled hidden-lg hidden-md hidden-sm">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="movies.html">الأفلام</a></li>
+          <li><a href="#">المسلسلات</a></li>
+        </ul>
+        <button class="sidebarBtn visible-xs-block">
+            <span></span>
+        </button>
+      </div>
+      <ul class="nav-list list-unstyled hidden-xs">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li class="last"><a href="#"><i class="fa fa-search fa-lg"></i></a></li>
+        <li><a href="movies.html">الأفلام</a></li>
+        <li><a href="#">المسلسلات</a></li>
+      </ul>
+      <a href="index.html" class="logo">عالم <span>السينما</span></a>
+    </div>
+  </nav>
+
+
+  <!-- Start Search -->
+  <section class="search hidden-xs">
+    <form class="form-search">
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" placeholder="إبحث هنا ...">
+      </div>
+    </form>
+  </section>
+
+  <div class="clearfix"></div>
+
+
+  <section class="sort">
+    <div class="container">
+      <div class="sort-right pull-left">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span class="filter">
+          تصفية الأفلام
+        </span>
+      </div>
+      <div class="sort-film">
+        <div class="sort-right pull-left">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+          <span class="filter">
+            تصفية الأفلام
+          </span>
+        </div>
+        <p class="category">التصنيف</p>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox"> كوميدي
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> أكشن
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> دراما
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> رعب
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> تشويق
+            </label>
+          </li>
+        </ul>
+        <p class="years-show">سنة العرض</p>
+        <select class="year" placeholder="سنة العرض">
+          <option value="">سنة العرض</option>
+          <option value="1">2018</option>
+          <option value="2">2017</option>
+          <option value="3">2016</option>
+          <option value="4">2015</option>
+          <option value="5">2014</option>
+          <option value="6">2013</option>
+        </select>
+      </div>
+
+
+      <div class="sort-left pull-right">
+        <span>
+          العرض حسب
+        </span>
+        <span class="option active">
+          <a href="#">
+            الأحدث
+          </a>
+        </span>
+        <span class="option">
+          <a href="#">
+            الاكثر مشاهدة
+          </a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="clearfix">
+
+  </div>
+
+  <section class="movies">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-4 hidden-xs">
+          <div class="first-box">
+            <p class="lead">
+              أفلام أجنبي
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov2.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            WAR DOGS
+          </p>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov3.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            SUICIDE SQUAD
+          </p>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov4.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            HOUSE OF CARDS
+          </p>
+        </div>
+
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov5.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            NARCOS
+          </p>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov6.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            GAME OF THRONES
+          </p>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov1.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            CERNTRAL INTELLIGENCE
+          </p>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov7.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            FURIOUS 8
+          </p>
+        </div>
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov8.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            THE MAGNIFICENT SEVEN
+          </p>
+        </div>
+
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov9.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            SULLY
+          </p>
+        </div>
+
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov10.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            DEADPOOL
+          </p>
+        </div>
+
+
+        <div class="col-md-2 col-sm-4">
+          <a href="single-movie.html">
+            <div class="box">
+              <img src="image/mov5.png" width="100%" height="100%" alt="comedy">
+              <div class="play">
+                <img src="image/play-button.png" alt="">
+                <p class="play-now">شاهد الآن</p>
+              </div>
+            </div>
+          </a>
+          <p class="box-name">
+            NARCOS
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="crumb text-center">
+    <ul class="pagination">
+      <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+      <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+      <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+      <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
+      <li class=""><a href="#">5 <span class="sr-only">(current)</span></a></li>
+    </ul>
+  </section>
+
+
+  <footer>
+    <p class="lead">
+      نتمى لكم قضاء وقت ممتع مع عالم السينما . لاتنسوا متابعتنا على مواقع التواصل الاجتماعي
+    </p>
+    <ul class="social-media list-unstyled">
+      <li><a href="https://youtube.com"><i class="fa fa-youtube-play"></i></a></li>
+      <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

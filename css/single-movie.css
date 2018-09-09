@@ -1,0 +1,614 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+a:active, a:focus, a:hover {
+  border: none;
+  outline: 0;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "29LTBukra";
+  src: url(../fonts/29ltbukrabold.ttf);
+  src: url(../fonts/29ltbukraregular.ttf);
+}
+@font-face {
+  font-family: "TheSans";
+  src: url(../fonts/ArbFONTS-TheSans-Bold.otf);
+  src: url(../fonts/ArbFONTS-TheSans-Plain.otf);
+}
+body {
+  font-family: "29LTBukra";
+}
+body ul, body ol {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media {
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.social-media li {
+  display: inline-block;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #FFF;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.social-media li:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.social-media li i {
+  line-height: 30px;
+  font-size: 17px;
+}
+.social-media li:nth-of-type(1) {
+  background-color: #cc191e;
+}
+.social-media li:nth-of-type(2) {
+  background-color: #1ebef0;
+}
+.social-media li:nth-of-type(3) {
+  background-color: #3a5ba2;
+}
+.social-media li:nth-of-type(4) {
+  background-color: #e1584b;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  border-bottom: 2px solid #ededed;
+  font-weight: bold;
+  color: #f84040;
+  position: relative;
+}
+nav .sidebar {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  right: -265px;
+  background-color: #f84040;
+  width: 250px;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 999999;
+}
+@media (max-width: 350px) {
+  nav .sidebar {
+    width: 200px;
+    right: -215px;
+  }
+}
+nav .sidebar.active {
+  right: 0;
+}
+nav .sidebar ul {
+  margin: 0;
+  padding: 20px 0;
+}
+nav .sidebar ul li {
+  line-height: 30px;
+}
+nav .sidebar ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  color: #fff;
+  border-bottom: 1px solid rgba(191, 62, 59, 0.2);
+}
+nav .sidebar .sidebarBtn {
+  position: absolute;
+  top: 20px;
+  left: -70px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: #f84040;
+  border: none;
+  outline: none;
+}
+nav .sidebar .sidebarBtn span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #FFF;
+  position: absolute;
+  top: 19px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+nav .sidebar .sidebarBtn span:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #FFF;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+nav .sidebar .sidebarBtn span:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #FFF;
+  -webkit-transition: .3s;
+  transition: 0.3s;
+}
+nav .sidebar .sidebarBtn.toggle span {
+  background: transparent;
+}
+nav .sidebar .sidebarBtn.toggle span:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+nav .sidebar .sidebarBtn.toggle span:after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+nav ul.nav-list li {
+  display: inline-block;
+  padding-left: 40px;
+  line-height: 80px;
+  font-size: 13px;
+}
+nav ul.nav-list li:not(:first-child) {
+  float: left;
+}
+nav ul.nav-list li.last {
+  padding-left: 0;
+}
+nav .logo {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 45%;
+  font-size: 24px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  nav .logo {
+    top: 25px;
+    right: 82%;
+    font-size: 20px;
+  }
+}
+@media (max-width: 687px) {
+  nav .logo {
+    top: 9px;
+  }
+}
+@media (max-width: 467px) {
+  nav .logo {
+    right: 74%;
+  }
+}
+@media (max-width: 367px) {
+  nav .logo {
+    right: 68%;
+  }
+}
+nav .logo span {
+  color: #1d1d1d;
+  font-weight: normal;
+}
+
+.search {
+  display: none;
+  height: 50px;
+  overflow: hidden;
+}
+.search .form-search input {
+  border-radius: 0;
+  text-align: center;
+  box-shadow: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.header {
+  background-image: url(../image/single-movie.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 472px;
+  max-width: 100%;
+  position: relative;
+}
+.header img {
+  height: 100%;
+  width: 100%;
+}
+
+.single-movie {
+  position: relative;
+  margin-top: -340px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.single-movie .movie-det {
+  font-family: "TheSans";
+}
+@media (max-width: 991px) {
+  .single-movie .movie-det .movie-img {
+    position: relative;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .single-movie .movie-det .movie-img img {
+    padding: 10px 30px;
+    width: 70% !important;
+    height: 70% !important;
+    text-align: center;
+  }
+}
+.single-movie .movie-det .movie-des {
+  margin-top: 50px;
+  color: #131313;
+  font-weight: bold;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-movie .movie-det .movie-des {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 991px) {
+  .single-movie .movie-det .movie-des {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+.single-movie .movie-det .movie-des .movie-des-date {
+  font-size: 15px;
+}
+.single-movie .movie-det .movie-des .movie-des-name {
+  font-size: 24px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-movie .movie-det .movie-des .movie-des-name {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .single-movie .movie-det .movie-des .movie-des-name {
+    margin-top: 10px;
+  }
+}
+.single-movie .movie-det .movie-des .movie-des-category {
+  font-size: 13px;
+  color: #f84040;
+}
+.single-movie .movie-det .movie-des .movie-des-story {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #4c4c4c;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-movie .movie-det .movie-des .movie-des-story {
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+}
+.single-movie .movie-det .movie-des .btn {
+  font-size: 15px;
+  background-color: #f84040;
+  color: #FFF;
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-movie .movie-det .movie-des .btn {
+    margin-top: 0;
+  }
+}
+.single-movie .movie-det .movie-des .btn .fa {
+  margin-left: 10px;
+  font-size: 17px;
+  vertical-align: middle;
+}
+.single-movie .movie-det .imdb {
+  font-size: 48px;
+  color: #f84040;
+  margin-top: 140px;
+  margin-right: 22px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-movie .movie-det .imdb {
+    margin-top: 92px;
+  }
+}
+@media (max-width: 991px) {
+  .single-movie .movie-det .imdb {
+    margin-right: 0;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+.single-movie .movie-det .imdb span {
+  color: #000;
+  font-size: 15px;
+  display: block;
+}
+.single-movie .comments {
+  margin-top: 60px;
+  padding-bottom: 10px;
+}
+.single-movie .comments .comments-head .comment-head-name p {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+.single-movie .comments .comments-head .comment-head-name p:before {
+  content: "";
+  display: inline-block;
+  height: 1.2em;
+  width: 6px;
+  background-color: #f84040;
+  margin-left: 13px;
+  position: relative;
+  bottom: -7px;
+  right: 0;
+}
+.single-movie .comments .comments-head .share {
+  text-align: left;
+  line-height: 2.3;
+}
+@media (max-width: 991px) {
+  .single-movie .comments .comments-head .share {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+.single-movie .comments .comments-head .share span {
+  color: #000;
+  font-size: 20px;
+  margin-left: 10px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .single-movie .comments .comments-head .share span {
+    margin-left: 0;
+  }
+}
+.single-movie .comments .comments-head .share .social-media li {
+  margin-left: 13px;
+  text-align: center;
+}
+.single-movie .comments .comments-head .share .social-media li:nth-of-type(4) {
+  margin-left: 0;
+}
+.single-movie .comments .comments-form {
+  margin-top: 45px;
+}
+@media (max-width: 991px) {
+  .single-movie .comments .comments-form .comment-input {
+    margin-bottom: 20px;
+  }
+}
+.single-movie .comments .comments-form .comment-input input {
+  border-radius: 30px;
+  height: 50px;
+  line-height: 50px;
+}
+.single-movie .comments .comments-form .comment-input input::placeholder {
+  font-size: 14px;
+  color: #666;
+}
+@media (max-width: 440px) {
+  .single-movie .comments .comments-form .comment-input input::placeholder {
+    font-size: 10px;
+  }
+}
+.single-movie .comments .comments-form .comment-input input.form-control {
+  border: 1px solid #DDD;
+}
+.single-movie .comments .comments-form .comment-button .btn {
+  border-radius: 30px;
+  background-color: #000;
+  color: #FFF;
+  height: 50px;
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+}
+.single-movie .comments .comments-pepole {
+  margin-top: 45px;
+}
+.single-movie .comments .comments-pepole .comment-box {
+  margin-bottom: 30px;
+}
+.single-movie .comments .comments-pepole .comment-box .comment-name img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.single-movie .comments .comments-pepole .comment-box .comment-name .comment-author {
+  color: #000;
+  font-size: 13px;
+  font-family: "29LTBukra";
+  font-weight: bold;
+  margin-right: 10px;
+}
+.single-movie .comments .comments-pepole .comment-box .comment-name .comment-date {
+  vertical-align: middle;
+  font-family: "29LTBukra";
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 35px;
+  color: #999;
+}
+.single-movie .comments .comments-pepole .comment-box .comment-des p {
+  margin-right: 47px;
+  line-height: 2;
+  color: #5d5c5c;
+  font-size: 15px;
+  font-family: "TheSans";
+  font-weight: normal;
+}
+
+footer {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+nav {
+  border-bottom: none;
+}
+nav ul.nav-list li.last {
+  padding-left: 0;
+}
+
+.download {
+  margin-top: 70px;
+}
+@media (max-width: 991px) {
+  .download {
+    text-align: center;
+  }
+}
+.download p {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 15px;
+  color: #131313;
+  font-family: "TheSans";
+  font-weight: bold;
+}
+.download button {
+  border-radius: 30px;
+  background-color: #000;
+  color: #FFF;
+  height: 50px;
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  border: none;
+  margin-bottom: 16px;
+  text-align: right;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .download button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .download button {
+    text-align: center;
+    width: auto;
+    margin-left: 10px;
+  }
+}
+.download button i {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+.download button.btn-blue {
+  background-color: #3d6bd9;
+}
+.download button.btn-red {
+  background-color: #fd425f;
+}
+.download button.btn-sub {
+  background-color: #90d45e;
+}
+
+.suggestion {
+  margin-top: 50px;
+  font-family: "TheSans";
+}
+.suggestion p.suggestion-head {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+.suggestion p.suggestion-head:before {
+  content: "";
+  display: inline-block;
+  height: 1.2em;
+  width: 6px;
+  background-color: #f84040;
+  margin-left: 13px;
+  position: relative;
+  bottom: -7px;
+  right: 0;
+}
+.suggestion .box {
+  margin-bottom: 35px;
+}
+@media (max-width: 991px) {
+  .suggestion .box {
+    position: relative;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .suggestion .box img {
+    padding: 10px 30px;
+    width: 70% !important;
+    height: 70% !important;
+    text-align: center;
+  }
+}
+.suggestion .box .box-name {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #0e0e0e;
+  font-weight: bold;
+}
+
+footer {
+  margin: 50px 0;
+  text-align: center;
+  border-top: 1px solid #DDD;
+  padding-top: 35px;
+}
+footer p.lead {
+  font-size: 14px;
+  font-family: "TheSans";
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+  footer p.lead {
+    padding: 0 15px;
+  }
+}
+
+/*# sourceMappingURL=single-movie.css.map */
